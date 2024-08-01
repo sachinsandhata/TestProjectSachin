@@ -1,0 +1,49 @@
+name: TestProjectSachin
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /TestProjectSachin/src
+        type: javaClasspath
+  - name: Firefox_webui_screener_longvideo.recdata
+  - name: Firefox_webui_screener_longvideo.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /TestProjectSachin/Firefox_webui_screener_longvideo.recdata
+        type: recsessionRecdata
+  - name: Firefox_webui_screener_longvideo.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.0.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF4FF9BE1457F0E82AE56333366431
+    dependencies: 
+      - path: /TestProjectSachin/Firefox_webui_screener_longvideo.recsession
+        type: testRecsession
+      - path: /TestProjectSachin/screener_in_36b.ma
+        type: test#moeb.applicationPackage
+  - name: LongerOne.recdata
+  - name: LongerOne.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /TestProjectSachin/LongerOne.recdata
+        type: recsessionRecdata
+  - name: LongerOne.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.0.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF4FFCDABD0BB0E82AE56333366431
+    dependencies: 
+      - path: /TestProjectSachin/LongerOne.recsession
+        type: testRecsession
+      - path: /TestProjectSachin/screener_in_36b.ma
+        type: test#moeb.applicationPackage
+  - name: screener_in_36b.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
